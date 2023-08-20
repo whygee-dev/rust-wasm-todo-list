@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rust Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Rust Todo List</h1>
+    <main>
+      <section class="list-container">
+        <h2>Todo</h2>
+        <ul id="todo-items"></ul>
+      </section>
+
+      <section class="list-container">
+        <h2>Doing</h2>
+        <ul id="doing-items"></ul>
+      </section>
+
+      <section class="list-container">
+        <h2>Done</h2>
+        <ul id="done-items"></ul>
+      </section>
+    </main>
+
+    <section class="input-section">
+      <textarea id="todo-textarea" rows="1" placeholder="Add a new todo..."></textarea>
+
+      <button id="new-todo">Add</button>
+    </section>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

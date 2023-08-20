@@ -1,0 +1,11 @@
+{
+  "author": "Yahya",
+  "name": "rust-wasm-todo-list",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "wasm-pack build --target web --out-dir static/pkg && rm -rf static/pkg/.gitignore static/pkg/README.md static/pkg/package.json"
+  },
+  "devDependencies": {
+    "wasm-pack": "^0.10.3"
+  }
+}
