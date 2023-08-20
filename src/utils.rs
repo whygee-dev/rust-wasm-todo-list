@@ -87,7 +87,6 @@ pub fn update_state(item_id: u64, state: TodoItemState) {
     unsafe {
         get_local_storage().set_item(STORAGE_KEY, to_string(&*LIST.data_ptr()).unwrap().as_str()).unwrap();
     }
-
 }
 
 pub fn delete_todo(item_id: u64) {
@@ -95,7 +94,6 @@ pub fn delete_todo(item_id: u64) {
     LIST.lock().remove(index);
 
     get_local_storage().set_item(STORAGE_KEY, to_string(&LIST.lock().clone()).unwrap().as_str()).unwrap();
-
 }
 
 pub fn on_new_todo_button_click() {

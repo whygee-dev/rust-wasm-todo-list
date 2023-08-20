@@ -1,3 +1,10 @@
+:root {
+  --blue: #0d2137;
+  --orange: #ed5716;
+  --dark-orange: #b7410e;
+  --light-blue: #e0eaf5;
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -5,12 +12,12 @@
 h1,
 h2 {
   text-align: center;
-  color: #e0eaf5;
+  color: var(--light-blue);
   font-family: "Tilt Prism", cursive;
 }
 
 body {
-  background-color: #0d2137;
+  background-color: var(--blue);
 }
 
 ul {
@@ -19,14 +26,16 @@ ul {
   padding: 0;
   overflow: hidden;
   min-width: 250px;
+  max-height: 65vh;
+  overflow-y: scroll;
 }
 
 li {
-  color: #e0eaf5;
+  color: var(--light-blue);
   display: flex;
   justify-content: space-between;
   min-height: 50px;
-  background-color: #ed5716;
+  background-color: var(--orange);
   border-radius: 4px;
   margin: 10px 0;
   padding: 10px;
@@ -43,16 +52,16 @@ button {
   border-radius: 4px;
   border: none;
   padding: 10px 20px;
-  background-color: #ed5716;
+  background-color: var(--orange);
   transition: background-color 0.3s ease-in-out;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   font-size: 16px;
-  color: #e0eaf5;
+  color: var(--light-blue);
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #b7410e;
+  background-color: var(--dark-orange);
 }
 
 main {
@@ -60,7 +69,7 @@ main {
   justify-content: space-around;
   max-width: 1000px;
   margin: 0 auto;
-  min-height: 70vh;
+  min-height: 80vh;
 }
 
 textarea {
@@ -72,6 +81,6 @@ textarea {
 }
 
 i.bx {
-  color: #e0eaf5;
+  color: var(--light-blue);
   cursor: pointer;
 }
