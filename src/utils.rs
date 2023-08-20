@@ -227,7 +227,13 @@ pub fn new_todo(
 }
 
 pub fn init() {
-    let raw_items_in_storage = get_local_storage().get_item(STORAGE_KEY).unwrap().unwrap();
+    let raw_items_in_storage = match get_local_storage().get_item(STORAGE_KEY) {
+        Ok(option) => match option {
+            Some(value) => value,
+            None => "[]".to_string()
+        }
+        Err(_) => "[]".to_string()
+    };
 
     let items_in_storage: Result<Vec<TodoItem>, _> = from_str(raw_items_in_storage.as_str());
     let items_in_storage_unwrapped = items_in_storage.unwrap();
